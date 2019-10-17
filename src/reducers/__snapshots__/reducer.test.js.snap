@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add new thing to list of things 1`] = `
+Object {
+  "texts": Array [
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 1,
+      "markdown": true,
+      "text": "test",
+      "type": "normal",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 2,
+      "markdown": true,
+      "text": "test",
+      "type": "normal",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 3,
+      "markdown": false,
+      "text": "test",
+      "type": "normal",
+    },
+  ],
+  "things": Array [
+    Object {
+      "id": 1,
+      "name": "šátek",
+      "selected": false,
+    },
+    Object {
+      "id": 2,
+      "name": "test",
+      "selected": true,
+    },
+  ],
+}
+`;
+
+exports[`change  text by id 1`] = `
+Object {
+  "texts": Array [
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 1,
+      "markdown": true,
+      "text": "changed",
+      "type": "normal",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 2,
+      "markdown": true,
+      "text": "test",
+      "type": "normal",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 3,
+      "markdown": false,
+      "text": "test",
+      "type": "normal",
+    },
+  ],
+  "things": Array [
+    Object {
+      "id": 1,
+      "name": "šátek",
+      "selected": false,
+    },
+  ],
+}
+`;
+
+exports[`changeSelected 1`] = `
+Object {
+  "texts": Array [
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 1,
+      "markdown": true,
+      "text": "test",
+      "type": "normal",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 2,
+      "markdown": true,
+      "text": "test",
+      "type": "normal",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 3,
+      "markdown": false,
+      "text": "test",
+      "type": "normal",
+    },
+  ],
+  "things": Array [
+    Object {
+      "id": 1,
+      "name": "šátek",
+      "selected": true,
+    },
+  ],
+}
+`;
