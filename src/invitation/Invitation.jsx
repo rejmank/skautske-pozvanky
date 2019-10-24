@@ -40,6 +40,8 @@ const PackHeader = styled.h2`
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
+  font-family: skautbold, sans-serif;
+  font-weight: normal;
 `;
 
 const Logo = styled.div`
@@ -58,7 +60,11 @@ class Invitation extends React.Component {
       <CardStyled>
         <LeftStyled>
           {texts.map(text => {
-            return <Text id={text.id} type={text.type} text={text.text} markdown={text.markdown} />;
+            return <Text id={text.id}
+              type={text.type}
+              text={text.text}
+              markdown={text.markdown}
+              color={text.color} />;
           })}
           <Logo>
             <img src={logo} alt="skautske logo" />

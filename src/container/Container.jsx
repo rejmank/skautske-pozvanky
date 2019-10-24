@@ -22,6 +22,10 @@ const ContainerStyled = styled.div`
   padding-right: 1em;
 `;
 
+const Print = styled.div`
+  display: none;
+`
+
 const Container = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const componentRef = useRef();
@@ -33,10 +37,6 @@ const Container = () => {
           <Invitation things={state.things} texts={state.texts} ref={componentRef} />
         </div>
         <RightSideStyled>
-          <ReactToPrint
-            trigger={() => <button type="button">print</button>}
-            content={() => componentRef.current}
-          />
           <Controls things={state.things} dispatch={dispatch} inputs={state.texts} />
         </RightSideStyled>
       </ContainerStyled>

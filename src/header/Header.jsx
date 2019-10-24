@@ -8,6 +8,8 @@ const HeaderStyled = styled.div`
   margin-bottom: 2rem;
   padding-left: 0.3rem;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 2px 5px 0px;
+  font-family: skautbold, sans-serif;
+  font-weight: normal;
 `;
 const Header = () => {
   return (
