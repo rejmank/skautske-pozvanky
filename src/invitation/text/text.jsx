@@ -20,8 +20,6 @@ const FooterText = styled.div`
 `;
 
 const get = (type, markdown, text, color) => {
-  console.log(color);
-
   switch (type) {
     case 'header':
       return <HeaderText> {markdown ? <ReactMarkdown source={text} /> : text}</HeaderText>;
@@ -38,7 +36,6 @@ const get = (type, markdown, text, color) => {
 };
 
 const Text = ({ type, color, text, markdown }) => {
-  console.log('color', color);
   return <BaseText color={color}>{get(type, markdown, text)}</BaseText>;
 };
 

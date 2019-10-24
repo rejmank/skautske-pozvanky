@@ -1,21 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Checkbox from 'react-bounce-checkbox';
 
 const SelectThingStyled = styled.div`
   display: flex;
+  padding-left: 4em;
 `;
 
 const SelectThing = ({ name, action, id, selected }) => {
   return (
     <div>
       <SelectThingStyled>
-        <input
-          type="checkbox"
-          value={selected}
-          onClick={() => action({ type: 'changeSelected', id })}
+        <Checkbox
+          textClassName="bouncechk__text"
+          text={name}
+          modifierClass="purple"
+          checked={selected}
+          onChange={() => {
+            action({ type: 'changeSelected', id });
+          }}
         />
-        <h1>{name}</h1>
       </SelectThingStyled>
     </div>
   );
