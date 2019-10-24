@@ -10,10 +10,16 @@ import Text from './text/text';
 const CardStyled = styled.div`
   display: flex;
   box-shadow: 1px 1px 10px;
+  -webkit-print-color-adjust: exact;
   height: 480px;
   width: 640px;
   position: relative;
   padding: 1rem 1rem 0.7rem;
+  @media print {
+        box-shadow: none;
+        border: 1px solid;
+    }
+}
 `;
 
 const LeftStyled = styled.div`
@@ -60,11 +66,15 @@ class Invitation extends React.Component {
       <CardStyled>
         <LeftStyled>
           {texts.map(text => {
-            return <Text id={text.id}
-              type={text.type}
-              text={text.text}
-              markdown={text.markdown}
-              color={text.color} />;
+            return (
+              <Text
+                id={text.id}
+                type={text.type}
+                text={text.text}
+                markdown={text.markdown}
+                color={text.color}
+              />
+            );
           })}
           <Logo>
             <img src={logo} alt="skautske logo" />

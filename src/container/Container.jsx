@@ -13,7 +13,10 @@ margin-top: 1rem;
 margin-right 1rem;
 margin-left: 1rem;
 margin-bottom: 1rem;
-width 45rem;`;
+width 45rem;
+@media print {
+      display: none;
+}`;
 const ContainerStyled = styled.div`
   display: flex;
   flex-wrap: reverse;
@@ -22,9 +25,12 @@ const ContainerStyled = styled.div`
   padding-right: 1em;
 `;
 
-const Print = styled.div`
+const PrintOnly = styled.div`
   display: none;
-`
+  @media print {
+    display: block;
+  }
+`;
 
 const Container = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -35,6 +41,9 @@ const Container = () => {
       <ContainerStyled>
         <div>
           <Invitation things={state.things} texts={state.texts} ref={componentRef} />
+          <PrintOnly>
+            <Invitation things={state.things} texts={state.texts} ref={componentRef} />
+          </PrintOnly>
         </div>
         <RightSideStyled>
           <Controls things={state.things} dispatch={dispatch} inputs={state.texts} />

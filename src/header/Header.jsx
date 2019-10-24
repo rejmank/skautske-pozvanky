@@ -10,6 +10,9 @@ const HeaderStyled = styled.div`
   box-shadow: rgba(0, 0, 0, 0.75) 0px 2px 5px 0px;
   font-family: skautbold, sans-serif;
   font-weight: normal;
+  @media print {
+    display: none;
+  }
 `;
 const Header = () => {
   return (
