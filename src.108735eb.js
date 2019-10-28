@@ -57,9 +57,9 @@ var e=require("process");Object.defineProperty(exports,"__esModule",{value:!0}),
 },{"react":"1n8/","styled-components":"tFSs","../styled/Styled":"P4zw"}],"uAlj":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=a(require("react")),t=a(require("styled-components")),r=a(require("prop-types")),n=require("../../styled/Styled");function a(e){return e&&e.__esModule?e:{default:e}}function u(){var e=l(["\n  max-width: 50%;\n  display: flex;\n  font-size: 1rem;\n  display: flex;\n  flex-flow: column wrap;\n  max-height: 70%;\n  justify-content: space-between;\n"]);return u=function(){return e},e}function l(e,t){return t||(t=e.slice(0)),Object.freeze(Object.defineProperties(e,{raw:{value:Object.freeze(t)}}))}var i=t.default.div(u()),f=function(t){var r=t.thing;return e.default.createElement(i,null,e.default.createElement(n.StandardText,{fontSize:"1rem",color:"rgb(154, 21, 143)"},"☐ ",r.name))};f.propTypes={thing:r.default.shape({name:r.default.string})},f.defaultProps={thing:{name:""}};var o=f;exports.default=o;
 },{"react":"1n8/","styled-components":"tFSs","prop-types":"5D9O","../../styled/Styled":"P4zw"}],"zag1":[function(require,module,exports) {
-module.exports="/skautske-pozvanky/tvar.4ce56161.svg";
+module.exports="https://rejmank.github.io/skautske-pozvanky/tvar.4ce56161.svg";
 },{}],"nvBM":[function(require,module,exports) {
-module.exports="/skautske-pozvanky/logo_color.a63c8b38.svg";
+module.exports="https://rejmank.github.io/skautske-pozvanky/logo_color.a63c8b38.svg";
 },{}],"K5Tb":[function(require,module,exports) {
 module.exports=o;var r=Object.prototype.hasOwnProperty;function o(){for(var o={},t=0;t<arguments.length;t++){var e=arguments[t];for(var a in e)r.call(e,a)&&(o[a]=e[a])}return o}
 },{}],"dgPI":[function(require,module,exports) {
@@ -934,4 +934,4 @@ var r=require("unist-util-visit-parents");function e(){return function(e){return
 },{"react":"1n8/","./container/Container":"ABlp"}],"Focm":[function(require,module,exports) {
 "use strict";var e=u(require("react")),r=u(require("react-dom")),t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}r.default.render(e.default.createElement(t.default,null),document.getElementById("app"));
 },{"react":"1n8/","react-dom":"NKHc","./App":"0+DP"}]},{},["Focm"], null)
-//# sourceMappingURL=/skautske-pozvanky/src.108735eb.js.map
+//# sourceMappingURL=https://rejmank.github.io/skautske-pozvanky/src.108735eb.js.map
