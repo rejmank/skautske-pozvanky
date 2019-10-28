@@ -66,40 +66,54 @@ const ThingsContainer = styled.div`
   margin-left: 1rem;
   margin-right: 1rem;
 `;
+
+const Buttons = styled.div`
+  text-align: center
+padding-top: 2em
+@media print {
+    display: none;
+  }
+`;
 // must be class component because of react-to-print
 
 class Invitation extends React.Component {
   render() {
     const { things, texts } = this.props;
     return (
-      <CardStyled>
-        <LeftStyled>
-          {texts.map(text => {
-            return (
-              <Text
-                id={text.id}
-                type={text.type}
-                text={text.text}
-                markdown={text.markdown}
-                color={text.color}
-              />
-            );
-          })}
-          <Logo>
-            <img src={logo} alt="skautske logo" />
-          </Logo>
-        </LeftStyled>
-        <RightStyled>
-          <PackHeader> ZABAL SI S SEBOU:</PackHeader>
-          <ThingsContainer>
-            {things
-              .filter(thing => thing.selected)
-              .map(thing => {
-                return <Thing thing={thing} />;
-              })}
-          </ThingsContainer>
-        </RightStyled>
-      </CardStyled>
+      <>
+        <CardStyled>
+          <LeftStyled>
+            {texts.map(text => {
+              return (
+                <Text
+                  id={text.id}
+                  type={text.type}
+                  text={text.text}
+                  markdown={text.markdown}
+                  color={text.color}
+                />
+              );
+            })}
+            <Logo>
+              <img src={logo} alt="skautske logo" />
+            </Logo>
+          </LeftStyled>
+          <RightStyled>
+            <PackHeader> ZABAL SI S SEBOU:</PackHeader>
+            <ThingsContainer>
+              {things
+                .filter(thing => thing.selected)
+                .map(thing => {
+                  return <Thing thing={thing} />;
+                })}
+            </ThingsContainer>
+          </RightStyled>
+        </CardStyled>
+        <Buttons>
+          <button onClick={() => window.print()}>Černobílá verze</button>
+          <button onClick={() => window.print()}>Dokoncit</button>
+        </Buttons>
+      </>
     );
   }
 }
