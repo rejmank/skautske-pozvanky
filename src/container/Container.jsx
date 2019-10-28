@@ -19,6 +19,9 @@ margin-bottom: 1rem;
 const ContainerStyled = styled.div`
   max-width: 90em;
   margin: auto;
+  @media (max-width: 1400px) {
+    max-width: 45em;
+  }
 `;
 
 const PrintOnly = styled.div`
