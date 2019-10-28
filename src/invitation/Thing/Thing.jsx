@@ -11,9 +11,6 @@ const ThingsStyled = styled.div`
   flex-flow: column wrap;
   max-height: 70%;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
 `;
 
 const Thing = ({ thing }) => {

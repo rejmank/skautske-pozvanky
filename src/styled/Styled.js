@@ -6,7 +6,8 @@ const H1 = styled.h1`
 
 const BigText = styled.h3`
   font-size: 1.8em;
-  color: ${props => (props.color ? props.color : '#2d2d30')};
+  margin-bottom: 5px;
+  color: ${props => (props.color ? props.color : '#5E2281')};
   font-style: ${props => (props.type ? props.type : 'normal')};
 `;
 

@@ -6,6 +6,7 @@ const Flexed = styled.div`
   display: flex;
   flex-wrap: wrap-reverse;
   align-items: flex-end;
+  justify-content: space-between;
 `;
 
 const Layout = React.memo(({ left, right }) => {

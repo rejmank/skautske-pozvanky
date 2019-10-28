@@ -9,16 +9,15 @@ import Text from './text/text';
 
 const CardStyled = styled.div`
   display: flex;
-  box-shadow: 1px 1px 10px;
+  border-color: #999999
+  border: 2px solid;
   -webkit-print-color-adjust: exact;
   height: 480px;
   width: 640px;
   position: relative;
   padding: 1rem 1rem 0.7rem;
-  @media print {
-        box-shadow: none;
-        border: 1px solid;
-    }
+  margin-left: 1rem;
+  background-color: white;
 }
 `;
 
@@ -57,6 +56,16 @@ const Logo = styled.div`
   margin-left: 1rem;
 `;
 
+const ThingsContainer = styled.div`
+  font-size: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 70%;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+`;
 // must be class component because of react-to-print
 
 class Invitation extends React.Component {
@@ -82,11 +91,13 @@ class Invitation extends React.Component {
         </LeftStyled>
         <RightStyled>
           <PackHeader> ZABAL SI S SEBOU:</PackHeader>
-          {things
-            .filter(thing => thing.selected)
-            .map(thing => {
-              return <Thing thing={thing} />;
-            })}
+          <ThingsContainer>
+            {things
+              .filter(thing => thing.selected)
+              .map(thing => {
+                return <Thing thing={thing} />;
+              })}
+          </ThingsContainer>
         </RightStyled>
       </CardStyled>
     );

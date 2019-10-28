@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { StandardText } from '../../styled/Styled';
 import Checkbox from 'react-bounce-checkbox';
 
 const SelectThingStyled = styled.div`
   display: flex;
-  padding-left: 4em;
+  padding-top: 0.5em;
 `;
 
 const SelectThing = ({ name, action, id, selected }) => {
@@ -14,7 +15,7 @@ const SelectThing = ({ name, action, id, selected }) => {
       <SelectThingStyled>
         <Checkbox
           textClassName="bouncechk__text"
-          text={name}
+          text={<StandardText fontSize="1.2em">{name}</StandardText>}
           modifierClass="purple"
           checked={selected}
           onChange={() => {

@@ -10,6 +10,7 @@ const HeaderStyled = styled.div`
   box-shadow: rgba(0, 0, 0, 0.75) 0px 2px 5px 0px;
   font-family: skautbold, sans-serif;
   font-weight: normal;
+  background-color: #a0067d;
   @media print {
     display: none;
   }
@@ -17,7 +18,7 @@ const HeaderStyled = styled.div`
 const Header = () => {
   return (
     <HeaderStyled>
-      <BigText>Generátor pozvánek</BigText>
+      <BigText color="white">Generátor pozvánek</BigText>
     </HeaderStyled>
   );
 };

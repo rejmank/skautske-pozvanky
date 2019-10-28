@@ -13,13 +13,12 @@ margin-top: 1rem;
 margin-right 1rem;
 margin-left: 1rem;
 margin-bottom: 1rem;
-width 45rem;
 @media print {
       display: none;
 }`;
 const ContainerStyled = styled.div`
-  padding-left: 1em;
-  padding-right: 1em;
+  max-width: 90em;
+  margin: auto;
 `;
 
 const PrintOnly = styled.div`
@@ -29,11 +28,15 @@ const PrintOnly = styled.div`
   }
 `;
 
+const ColoredBackground = styled.div`
+  background-color: #f2f2f2;
+  height: 100vh;
+`;
 const Container = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const componentRef = useRef();
   return (
-    <div>
+    <ColoredBackground>
       <Header />
       <ContainerStyled>
         <Layout
@@ -52,7 +55,7 @@ const Container = () => {
           }
         />
       </ContainerStyled>
-    </div>
+    </ColoredBackground>
   );
 };
 
