@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://rejmank.github.io/skautske-pozvanky/",
   "scripts": {
     "start": "parcel src/index.html",
     "test": "jest",
     "build": "parcel build scr/index.html",
-    "predeploy": "rm -rf dist && parcel build ./src/index.html --public-url /skautske-pozvanky",
+    "predeploy": "rm -rf dist && parcel build ./src/index.html --public-url https://rejmank.github.io/skautske-pozvanky/",
     "deploy": "gh-pages -d dist"
   },
   "author": "",
