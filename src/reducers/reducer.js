@@ -41,6 +41,10 @@ export const changeText = (state, value) => {
   );
 };
 
+export const switchToBw = (state) => {
+  return assocPath(['bw'], !path(['bw'], state), state)
+}
+
 const reducer = (state, action) => {
   switch (action.type) {
     case 'changeSelected':
@@ -49,6 +53,8 @@ const reducer = (state, action) => {
       return addThing(state, action.name);
     case 'changeText':
       return changeText(state, action.value);
+    case 'switchToBw':
+      return switchToBw(state)
     default:
       return state;
   }

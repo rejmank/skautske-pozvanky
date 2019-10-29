@@ -34,10 +34,19 @@ const PrintOnly = styled.div`
 const ColoredBackground = styled.div`
   background-color: #f2f2f2;
   height: 100vh;
+  `;
+
+const Buttons = styled.div`
+  text-align: center
+padding-top: 2em
+@media print {
+    display: none;
+  }
 `;
 const Container = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const componentRef = useRef();
+  console.log(state)
   return (
     <ColoredBackground>
       <Header />
@@ -45,7 +54,13 @@ const Container = () => {
         <Layout
           left={
             <div>
-              <Invitation things={state.things} texts={state.texts} ref={componentRef} />
+              <Invitation bw={state.bw} things={state.things} texts={state.texts} ref={componentRef} />
+              <Buttons>
+                <button onClick={() => dispatch({
+                  type: 'switchToBw'
+                })}>Černobílá verze</button>
+                <button onClick={() => window.print()}>Dokoncit</button>
+              </Buttons>
               <PrintOnly>
                 <Invitation things={state.things} texts={state.texts} ref={componentRef} />
               </PrintOnly>

@@ -86,7 +86,9 @@ const initialState = {
       name: 'šátek',
       selected: false
     }
-  ]
+  ],
+  bw: false
+
 };
 
 export default initialState;

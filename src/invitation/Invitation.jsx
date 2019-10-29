@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import PropTypes, { arrayOf } from 'prop-types';
 import Thing from './Thing/Thing';
 import tvar from '../../assets/tvar.svg';
+import tvarBw from '../../assets/tvarbw.svg'
 import logo from '../../assets/logo_color.svg';
 import Text from './text/text';
 
@@ -29,7 +30,7 @@ const LeftStyled = styled.div`
 `;
 
 const RightStyled = styled.div`
-  background-image: url(${tvar});
+  background-image: url(${props => props.bw ? tvarBw : tvar});
   background-size: contain;
   background-repeat: no-repeat;
   width: 45%;
@@ -67,18 +68,12 @@ const ThingsContainer = styled.div`
   margin-right: 1rem;
 `;
 
-const Buttons = styled.div`
-  text-align: center
-padding-top: 2em
-@media print {
-    display: none;
-  }
-`;
+
 // must be class component because of react-to-print
 
 class Invitation extends React.Component {
   render() {
-    const { things, texts } = this.props;
+    const { things, texts, bw } = this.props;
     return (
       <>
         <CardStyled>
@@ -98,7 +93,7 @@ class Invitation extends React.Component {
               <img src={logo} alt="skautske logo" />
             </Logo>
           </LeftStyled>
-          <RightStyled>
+          <RightStyled bw={bw}>
             <PackHeader> ZABAL SI S SEBOU:</PackHeader>
             <ThingsContainer>
               {things
@@ -109,10 +104,7 @@ class Invitation extends React.Component {
             </ThingsContainer>
           </RightStyled>
         </CardStyled>
-        <Buttons>
-          <button onClick={() => window.print()}>Černobílá verze</button>
-          <button onClick={() => window.print()}>Dokoncit</button>
-        </Buttons>
+
       </>
     );
   }
@@ -131,7 +123,8 @@ Invitation.propTypes = {
     name: PropTypes.string.isRequired,
     selected: PropTypes.bool.isRequired,
     id: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  bw: PropTypes.bool
 };
 
 export default Invitation;

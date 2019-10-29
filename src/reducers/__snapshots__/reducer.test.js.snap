@@ -2,21 +2,24 @@
 
 exports[`add new thing to list of things 1`] = `
 Object {
+  "bw": false,
   "texts": Array [
-    Object {
-      "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
-      "id": 1,
-      "markdown": true,
-      "text": "test",
-      "type": "normal",
-    },
     Object {
       "color": "rgb(154, 21, 143)",
       "colorbw": "#535355",
       "id": 2,
       "markdown": true,
-      "text": "test",
+      "name": "Nadpis",
+      "text": "Pozvánka na vánoční výpravu",
+      "type": "header",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 1,
+      "markdown": true,
+      "name": "Obsah",
+      "text": "Vánoce už jsou za dveřmi! Proto se opět vydáme na vánoční výpravu do Nové Vsi pod Horou Svatého Šebestiána, která se bude konat **16. 12.–18. 12.**. Sejdeme se **na nádraží** v pátek 16. 12. **v 18:15** (vlak odjíždí v 18:40). Děti je třeba dopravit až na nádraží. Vrátíme se v neděli kolem **13:48** tamtéž.",
       "type": "normal",
     },
     Object {
@@ -24,18 +27,69 @@ Object {
       "colorbw": "#535355",
       "id": 3,
       "markdown": false,
-      "text": "test",
-      "type": "normal",
+      "name": "Patička",
+      "text": "Janča, Domča a Lenča, vedoucí oddílu Sedmikrásky",
+      "type": "footer",
     },
   ],
   "things": Array [
     Object {
       "id": 1,
+      "name": "přezuvky",
+      "selected": true,
+    },
+    Object {
+      "id": 2,
+      "name": "spacák",
+      "selected": false,
+    },
+    Object {
+      "id": 3,
+      "name": "ešus",
+      "selected": false,
+    },
+    Object {
+      "id": 4,
+      "name": "karimatku",
+      "selected": false,
+    },
+    Object {
+      "id": 5,
+      "name": "věci na schůzku",
+      "selected": false,
+    },
+    Object {
+      "id": 6,
+      "name": "zápisník a tužku",
+      "selected": false,
+    },
+    Object {
+      "id": 7,
+      "name": "kroj",
+      "selected": false,
+    },
+    Object {
+      "id": 8,
+      "name": "hygienu",
+      "selected": false,
+    },
+    Object {
+      "id": 9,
+      "name": "baterku",
+      "selected": false,
+    },
+    Object {
+      "id": 10,
+      "name": "večeři",
+      "selected": false,
+    },
+    Object {
+      "id": 11,
       "name": "šátek",
       "selected": false,
     },
     Object {
-      "id": 2,
+      "id": 12,
       "name": "test",
       "selected": true,
     },
@@ -45,21 +99,24 @@ Object {
 
 exports[`change  text by id 1`] = `
 Object {
+  "bw": false,
   "texts": Array [
-    Object {
-      "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
-      "id": 1,
-      "markdown": true,
-      "text": "changed",
-      "type": "normal",
-    },
     Object {
       "color": "rgb(154, 21, 143)",
       "colorbw": "#535355",
       "id": 2,
       "markdown": true,
-      "text": "test",
+      "name": "Nadpis",
+      "text": "Pozvánka na vánoční výpravu",
+      "type": "header",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 1,
+      "markdown": true,
+      "name": "Obsah",
+      "text": "changed",
       "type": "normal",
     },
     Object {
@@ -67,13 +124,64 @@ Object {
       "colorbw": "#535355",
       "id": 3,
       "markdown": false,
-      "text": "test",
-      "type": "normal",
+      "name": "Patička",
+      "text": "Janča, Domča a Lenča, vedoucí oddílu Sedmikrásky",
+      "type": "footer",
     },
   ],
   "things": Array [
     Object {
       "id": 1,
+      "name": "přezuvky",
+      "selected": true,
+    },
+    Object {
+      "id": 2,
+      "name": "spacák",
+      "selected": false,
+    },
+    Object {
+      "id": 3,
+      "name": "ešus",
+      "selected": false,
+    },
+    Object {
+      "id": 4,
+      "name": "karimatku",
+      "selected": false,
+    },
+    Object {
+      "id": 5,
+      "name": "věci na schůzku",
+      "selected": false,
+    },
+    Object {
+      "id": 6,
+      "name": "zápisník a tužku",
+      "selected": false,
+    },
+    Object {
+      "id": 7,
+      "name": "kroj",
+      "selected": false,
+    },
+    Object {
+      "id": 8,
+      "name": "hygienu",
+      "selected": false,
+    },
+    Object {
+      "id": 9,
+      "name": "baterku",
+      "selected": false,
+    },
+    Object {
+      "id": 10,
+      "name": "večeři",
+      "selected": false,
+    },
+    Object {
+      "id": 11,
       "name": "šátek",
       "selected": false,
     },
@@ -83,21 +191,24 @@ Object {
 
 exports[`changeSelected 1`] = `
 Object {
+  "bw": false,
   "texts": Array [
-    Object {
-      "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
-      "id": 1,
-      "markdown": true,
-      "text": "test",
-      "type": "normal",
-    },
     Object {
       "color": "rgb(154, 21, 143)",
       "colorbw": "#535355",
       "id": 2,
       "markdown": true,
-      "text": "test",
+      "name": "Nadpis",
+      "text": "Pozvánka na vánoční výpravu",
+      "type": "header",
+    },
+    Object {
+      "color": "rgb(154, 21, 143)",
+      "colorbw": "#535355",
+      "id": 1,
+      "markdown": true,
+      "name": "Obsah",
+      "text": "Vánoce už jsou za dveřmi! Proto se opět vydáme na vánoční výpravu do Nové Vsi pod Horou Svatého Šebestiána, která se bude konat **16. 12.–18. 12.**. Sejdeme se **na nádraží** v pátek 16. 12. **v 18:15** (vlak odjíždí v 18:40). Děti je třeba dopravit až na nádraží. Vrátíme se v neděli kolem **13:48** tamtéž.",
       "type": "normal",
     },
     Object {
@@ -105,15 +216,66 @@ Object {
       "colorbw": "#535355",
       "id": 3,
       "markdown": false,
-      "text": "test",
-      "type": "normal",
+      "name": "Patička",
+      "text": "Janča, Domča a Lenča, vedoucí oddílu Sedmikrásky",
+      "type": "footer",
     },
   ],
   "things": Array [
     Object {
       "id": 1,
+      "name": "přezuvky",
+      "selected": false,
+    },
+    Object {
+      "id": 2,
+      "name": "spacák",
+      "selected": false,
+    },
+    Object {
+      "id": 3,
+      "name": "ešus",
+      "selected": false,
+    },
+    Object {
+      "id": 4,
+      "name": "karimatku",
+      "selected": false,
+    },
+    Object {
+      "id": 5,
+      "name": "věci na schůzku",
+      "selected": false,
+    },
+    Object {
+      "id": 6,
+      "name": "zápisník a tužku",
+      "selected": false,
+    },
+    Object {
+      "id": 7,
+      "name": "kroj",
+      "selected": false,
+    },
+    Object {
+      "id": 8,
+      "name": "hygienu",
+      "selected": false,
+    },
+    Object {
+      "id": 9,
+      "name": "baterku",
+      "selected": false,
+    },
+    Object {
+      "id": 10,
+      "name": "večeři",
+      "selected": false,
+    },
+    Object {
+      "id": 11,
       "name": "šátek",
-      "selected": true,
+      "selected": false,
     },
   ],
 }

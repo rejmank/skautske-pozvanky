@@ -1,4 +1,4 @@
-import { changeSelected, addThing, changeText } from './reducer';
+import { changeSelected, addThing, changeText, switchToBw } from './reducer';
 import initialState from '../../assets/typeOne';
 
 test('changeSelected', () => {
@@ -20,3 +20,7 @@ test('change  text by id', () => {
     )
   ).toMatchSnapshot();
 });
+
+test('switch to bw', () => {
+  expect(switchToBw({ bw: true })).toEqual({ bw: false })
+})
