@@ -41,9 +41,9 @@ export const changeText = (state, value) => {
   );
 };
 
-export const switchToBw = (state) => {
-  return assocPath(['bw'], !path(['bw'], state), state)
-}
+export const switchToBw = state => {
+  return assocPath(['bw'], !path(['bw'], state), state);
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -54,7 +54,7 @@ const reducer = (state, action) => {
     case 'changeText':
       return changeText(state, action.value);
     case 'switchToBw':
-      return switchToBw(state)
+      return switchToBw(state);
     default:
       return state;
   }

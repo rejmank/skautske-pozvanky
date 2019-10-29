@@ -84,7 +84,7 @@ const Controls = ({ things, inputs, dispatch }) => {
                 action={dispatch}
                 header={input.name}
                 id={input.id}
-                value={input.text}
+                text={input.text}
               />
             );
           })}

@@ -6,7 +6,6 @@ Object {
   "texts": Array [
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 2,
       "markdown": true,
       "name": "Nadpis",
@@ -15,7 +14,6 @@ Object {
     },
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 1,
       "markdown": true,
       "name": "Obsah",
@@ -24,7 +22,6 @@ Object {
     },
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 3,
       "markdown": false,
       "name": "Patička",
@@ -103,7 +100,6 @@ Object {
   "texts": Array [
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 2,
       "markdown": true,
       "name": "Nadpis",
@@ -112,7 +108,6 @@ Object {
     },
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 1,
       "markdown": true,
       "name": "Obsah",
@@ -121,7 +116,6 @@ Object {
     },
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 3,
       "markdown": false,
       "name": "Patička",
@@ -195,7 +189,6 @@ Object {
   "texts": Array [
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 2,
       "markdown": true,
       "name": "Nadpis",
@@ -204,7 +197,6 @@ Object {
     },
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 1,
       "markdown": true,
       "name": "Obsah",
@@ -213,7 +205,6 @@ Object {
     },
     Object {
       "color": "rgb(154, 21, 143)",
-      "colorbw": "#535355",
       "id": 3,
       "markdown": false,
       "name": "Patička",
