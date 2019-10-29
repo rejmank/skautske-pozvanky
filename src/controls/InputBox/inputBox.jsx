@@ -22,7 +22,7 @@ const TextArea = styled.textarea`
   padding: 5px;
   height: ${props => (props.type ? getHeight(props.type) : '1.5')}em;
 `;
-const InputBox = ({ action, header, id, value, type }) => {
+const InputBox = ({ action, header, id, text, type }) => {
   return (
     <>
       <BigText>{header}</BigText>
@@ -34,10 +34,23 @@ const InputBox = ({ action, header, id, value, type }) => {
             value: { value: e.target.value, id }
           });
         }}
-        value={value}
+        value={text}
       />
     </>
   );
+};
+
+InputBox.propTypes = {
+  action: propTypes.func,
+  header: propTypes.string.isRequired,
+  id: propTypes.number.isRequired,
+  text: propTypes.string,
+  type: propTypes.oneOf(['header', 'normal', 'footer']).isRequired
+};
+
+InputBox.defaultProps = {
+  action: () => {},
+  text: ''
 };
 
 export default InputBox;

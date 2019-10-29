@@ -1,11 +1,12 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes, { arrayOf } from 'prop-types';
+import propTypes, { arrayOf } from 'prop-types';
 import Thing from './Thing/Thing';
 import tvar from '../../assets/tvar.svg';
-import tvarBw from '../../assets/tvarbw.svg'
+import tvarBw from '../../assets/tvarbw.svg';
 import logo from '../../assets/logo_color.svg';
+import logobw from '../../assets/logo_bw.svg';
 import Text from './text/text';
 
 const CardStyled = styled.div`
@@ -30,7 +31,7 @@ const LeftStyled = styled.div`
 `;
 
 const RightStyled = styled.div`
-  background-image: url(${props => props.bw ? tvarBw : tvar});
+  background-image: url(${props => (props.bw ? tvarBw : tvar)});
   background-size: contain;
   background-repeat: no-repeat;
   width: 45%;
@@ -42,7 +43,7 @@ const PackHeader = styled.h2`
   font-size: 1.1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  color: rgb(90, 37, 145);
+  color: ${props => (props.bw ? '#2d2d30' : '#5a2591')};
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
@@ -68,7 +69,6 @@ const ThingsContainer = styled.div`
   margin-right: 1rem;
 `;
 
-
 // must be class component because of react-to-print
 
 class Invitation extends React.Component {
@@ -81,50 +81,58 @@ class Invitation extends React.Component {
             {texts.map(text => {
               return (
                 <Text
+                  key={text.id}
                   id={text.id}
                   type={text.type}
                   text={text.text}
                   markdown={text.markdown}
-                  color={text.color}
+                  color={bw ? '#535355' : text.color}
                 />
               );
             })}
             <Logo>
-              <img src={logo} alt="skautske logo" />
+              <img src={bw ? logobw : logo} alt="skautske logo" />
             </Logo>
           </LeftStyled>
           <RightStyled bw={bw}>
-            <PackHeader> ZABAL SI S SEBOU:</PackHeader>
+            <PackHeader bw={bw}> ZABAL SI S SEBOU:</PackHeader>
             <ThingsContainer>
               {things
                 .filter(thing => thing.selected)
                 .map(thing => {
-                  return <Thing thing={thing} />;
+                  return <Thing key={thing.id} bw={bw} thing={thing} />;
                 })}
             </ThingsContainer>
           </RightStyled>
         </CardStyled>
-
       </>
     );
   }
 }
 
 Invitation.propTypes = {
-  texts: arrayOf({
-    text: PropTypes.string,
-    color: PropTypes.string,
-    colorbw: PropTypes.string,
-    type: PropTypes.oneOf(['normal', 'bold', 'italic']),
-    markdown: PropTypes.bool,
-    id: PropTypes.number
-  }).isRequired,
-  things: arrayOf({
-    name: PropTypes.string.isRequired,
-    selected: PropTypes.bool.isRequired,
-    id: PropTypes.string.isRequired
-  }).isRequired,
-  bw: PropTypes.bool
+  texts: arrayOf(
+    propTypes.shape({
+      text: propTypes.string,
+      color: propTypes.string,
+      colorbw: propTypes.string,
+      type: propTypes.oneOf(['header', 'normal', 'footer']),
+      markdown: propTypes.bool,
+      id: propTypes.number.isRequired
+    })
+  ).isRequired,
+  things: arrayOf(
+    propTypes.shape({
+      name: propTypes.string.isRequired,
+      selected: propTypes.bool.isRequired,
+      id: propTypes.number.isRequired
+    })
+  ).isRequired,
+  bw: propTypes.bool
+};
+
+Invitation.defaultProps = {
+  bw: false
 };
 
 export default Invitation;

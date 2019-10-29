@@ -34,19 +34,34 @@ const PrintOnly = styled.div`
 const ColoredBackground = styled.div`
   background-color: #f2f2f2;
   height: 100vh;
-  `;
+`;
 
 const Buttons = styled.div`
-  text-align: center
-padding-top: 2em
-@media print {
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 2em @media print {
     display: none;
   }
 `;
+
+const Button = styled.button`
+  border-radius: 8.53px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: none;
+  background-color: ${props => (props.color ? props.color : '#333333')};
+  color: white;
+`;
+
 const Container = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const componentRef = useRef();
-  console.log(state)
   return (
     <ColoredBackground>
       <Header />
@@ -54,12 +69,25 @@ const Container = () => {
         <Layout
           left={
             <div>
-              <Invitation bw={state.bw} things={state.things} texts={state.texts} ref={componentRef} />
+              <Invitation
+                bw={state.bw}
+                things={state.things}
+                texts={state.texts}
+                ref={componentRef}
+              />
               <Buttons>
-                <button onClick={() => dispatch({
-                  type: 'switchToBw'
-                })}>Černobílá verze</button>
-                <button onClick={() => window.print()}>Dokoncit</button>
+                <Button
+                  onClick={() =>
+                    dispatch({
+                      type: 'switchToBw'
+                    })
+                  }
+                >
+                  Černobílá verze
+                </Button>
+                <Button color={'#008836'} onClick={() => window.print()}>
+                  Dokončit
+                </Button>
               </Buttons>
               <PrintOnly>
                 <Invitation things={state.things} texts={state.texts} ref={componentRef} />

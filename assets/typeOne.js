@@ -4,7 +4,6 @@ const initialState = {
       id: 2,
       text: 'Pozvánka na vánoční výpravu',
       color: 'rgb(154, 21, 143)',
-      colorbw: '#535355',
       type: 'header',
       name: 'Nadpis',
       markdown: true
@@ -14,7 +13,6 @@ const initialState = {
       text:
         'Vánoce už jsou za dveřmi! Proto se opět vydáme na vánoční výpravu do Nové Vsi pod Horou Svatého Šebestiána, která se bude konat **16. 12.–18. 12.**. Sejdeme se **na nádraží** v pátek 16. 12. **v 18:15** (vlak odjíždí v 18:40). Děti je třeba dopravit až na nádraží. Vrátíme se v neděli kolem **13:48** tamtéž.',
       color: 'rgb(154, 21, 143)',
-      colorbw: '#535355',
       type: 'normal',
       name: 'Obsah',
       markdown: true
@@ -24,7 +22,6 @@ const initialState = {
       id: 3,
       text: 'Janča, Domča a Lenča, vedoucí oddílu Sedmikrásky',
       color: 'rgb(154, 21, 143)',
-      colorbw: '#535355',
       type: 'footer',
       name: 'Patička',
       markdown: false
@@ -88,7 +85,6 @@ const initialState = {
     }
   ],
   bw: false
-
 };
 
 export default initialState;

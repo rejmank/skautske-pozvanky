@@ -9,14 +9,14 @@ const ThingsStyled = styled.div`
   font-size: 1rem;
   display: flex;
   flex-flow: column wrap;
-  max-height: 70%;
+  max-height: 80%;
   justify-content: space-between;
 `;
 
-const Thing = ({ thing }) => {
+const Thing = ({ thing, bw }) => {
   return (
     <ThingsStyled>
-      <StandardText fontSize="1rem" color="rgb(154, 21, 143)">
+      <StandardText fontSize="1rem" color={bw ? '#535355' : '#9a158f'}>
         ☐ {thing.name}
       </StandardText>
     </ThingsStyled>
@@ -26,13 +26,15 @@ const Thing = ({ thing }) => {
 Thing.propTypes = {
   thing: PropTypes.shape({
     name: PropTypes.string
-  })
+  }),
+  bw: PropTypes.bool
 };
 
 Thing.defaultProps = {
   thing: {
     name: ''
-  }
+  },
+  bw: false
 };
 
 export default Thing;

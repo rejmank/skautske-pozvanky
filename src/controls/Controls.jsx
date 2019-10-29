@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 import Layout from '../layout/layout';
 import SelectThing from './SelectThing/SelectThing';
@@ -50,6 +50,7 @@ const Controls = ({ things, inputs, dispatch }) => {
           {things.map(thing => {
             return (
               <SelectThing
+                key={thing.id}
                 name={thing.name}
                 id={thing.id}
                 action={dispatch}
@@ -78,6 +79,7 @@ const Controls = ({ things, inputs, dispatch }) => {
           {inputs.map(input => {
             return (
               <InputBox
+                key={input.id}
                 type={input.type}
                 action={dispatch}
                 header={input.name}
@@ -93,14 +95,25 @@ const Controls = ({ things, inputs, dispatch }) => {
 };
 
 Controls.propTypes = {
-  things: PropTypes.arrayOf({
-    name: PropTypes.string.isRequired,
-    action: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired,
-    selected: PropTypes.bool.isRequired
-  }).isRequired,
-  inputs: PropTypes.arrayOf({}).isRequired,
-  dispatch: PropTypes.func.isRequired
+  things: propTypes.arrayOf(
+    propTypes.shape({
+      name: propTypes.string.isRequired,
+      action: propTypes.func,
+      id: propTypes.number.isRequired,
+      selected: propTypes.bool.isRequired
+    })
+  ).isRequired,
+  inputs: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.number.isRequired,
+      text: propTypes.string.isRequired,
+      color: propTypes.string.isRequired,
+      type: propTypes.oneOf(['header', 'normal', 'footer']),
+      name: propTypes.string.isRequired,
+      markdown: propTypes.bool
+    })
+  ).isRequired,
+  dispatch: propTypes.func.isRequired
 };
 
 export default Controls;

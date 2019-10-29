@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
 const BaseText = styled.div`
@@ -19,7 +20,7 @@ const FooterText = styled.div`
   font-style: italic;
 `;
 
-const get = (type, markdown, text, color) => {
+const get = (type, markdown, text) => {
   switch (type) {
     case 'header':
       return <HeaderText> {markdown ? <ReactMarkdown source={text} /> : text}</HeaderText>;
@@ -39,5 +40,17 @@ const Text = ({ type, color, text, markdown }) => {
   return <BaseText color={color}>{get(type, markdown, text)}</BaseText>;
 };
 
+Text.propTypes = {
+  type: propTypes.oneOf(['header', 'normal', 'footer']).isRequired,
+  color: propTypes.string,
+  text: propTypes.string,
+  markdown: propTypes.bool
+};
+
+Text.defaultProps = {
+  color: null,
+  text: '',
+  markdown: false
+};
 // markdown ? <ReactMarkdown source={text} /> : text
 export default Text;
