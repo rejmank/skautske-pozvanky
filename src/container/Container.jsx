@@ -39,7 +39,8 @@ const ColoredBackground = styled.div`
 const Buttons = styled.div`
   text-align: center;
   padding-bottom: 3rem;
-  padding-top: 2em @media print {
+  padding-top: 2em;
+  @media print {
     display: none;
   }
 `;
@@ -57,6 +58,9 @@ const Button = styled.button`
   border: none;
   background-color: ${props => (props.color ? props.color : '#333333')};
   color: white;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Container = () => {
