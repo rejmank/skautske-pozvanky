@@ -22,5 +22,5 @@ test('change  text by id', () => {
 });
 
 test('switch to bw', () => {
-  expect(switchToBw({ bw: true })).toEqual({ bw: false })
-})
+  expect(switchToBw({ bw: true })).toEqual({ bw: false });
+});

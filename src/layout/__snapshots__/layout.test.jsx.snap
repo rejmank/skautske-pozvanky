@@ -1,66 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`header 1`] = `
+exports[`layout 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c2 {
-  font-size: 1.8em;
-  margin-bottom: 5px;
-  color: white;
-  font-style: normal;
-}
-
-.c3 {
-  font-size: 0.8em;
-  color: white;
-  font-style: normal;
-}
-
-.c0 {
+  "baseElement": .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 2rem;
-  padding-left: 0.3rem;
-  box-shadow: rgba(0,0,0,0.75) 0px 2px 5px 0px;
-  font-family: skautbold,sans-serif;
-  font-weight: normal;
-  background-color: #a0067d;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90em;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.c4 {
-  color: white;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-left: 1em;
-}
-
-@media print {
-  .c0 {
-    display: none;
-  }
 }
 
 <body>
@@ -68,66 +26,24 @@ Object {
       <div
         class="c0"
       >
-        <div
-          class="c1"
-        >
-          <h3
-            class="c2"
-            color="white"
-          >
-            Generátor pozvánek
-          </h3>
-          <div
-            class="c3"
-            color="white"
-          >
-            <a
-              class="c4"
-              href="http://www.logo.skaut.cz/"
-            >
-              logo.skaut.cz
-            </a>
-            <a
-              class="c4"
-              href="http://www.logo.skaut.cz/"
-            >
-              Další grafické šablony a nástroje
-            </a>
-          </div>
+        <div>
+          <div />
+        </div>
+        <div>
+          <div />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-bxivhb ddEGGm"
+      class="sc-bdVaJa jcpYkx"
     >
-      <div
-        class="sc-ifAKCX cmnENJ"
-      >
-        <h3
-          class="sc-bwzfXH dEcpQI"
-          color="white"
-        >
-          Generátor pozvánek
-        </h3>
-        <div
-          class="sc-htpNat erRABY"
-          color="white"
-        >
-          <a
-            class="sc-EHOje kPXZwU"
-            href="http://www.logo.skaut.cz/"
-          >
-            logo.skaut.cz
-          </a>
-          <a
-            class="sc-EHOje kPXZwU"
-            href="http://www.logo.skaut.cz/"
-          >
-            Další grafické šablony a nástroje
-          </a>
-        </div>
+      <div>
+        <div />
+      </div>
+      <div>
+        <div />
       </div>
     </div>
   </div>,
