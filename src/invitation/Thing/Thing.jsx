@@ -5,19 +5,24 @@ import { StandardText } from '../../styled/Styled';
 
 const ThingsStyled = styled.div`
   max-width: 50%;
-  display: flex;
   font-size: 1rem;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: nowrap;
   max-height: 80%;
-  justify-content: space-between;
 `;
 
 const Thing = ({ thing, bw }) => {
   return (
     <ThingsStyled>
       <StandardText fontSize="1rem" color={bw ? '#535355' : '#9a158f'}>
-        ☐ {thing.name}
+        ☐
+      </StandardText>
+      <StandardText
+        style={{ 'padding-left': '5px' }}
+        fontSize="1rem"
+        color={bw ? '#535355' : '#9a158f'}
+      >
+        {thing.name}
       </StandardText>
     </ThingsStyled>
   );

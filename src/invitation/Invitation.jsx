@@ -11,8 +11,7 @@ import Text from './text/text';
 
 const CardStyled = styled.div`
   display: flex;
-  border-color: #999999
-  border: 2px solid;
+  border: 2px solid #152469;
   -webkit-print-color-adjust: exact;
   height: 480px;
   width: 640px;
@@ -41,28 +40,27 @@ const RightStyled = styled.div`
 
 const PackHeader = styled.h2`
   font-size: 1.1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   color: ${props => (props.bw ? '#2d2d30' : '#5a2591')};
   text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 35%;
+  margin-right: 35%;
   font-family: skautbold, sans-serif;
   font-weight: normal;
 `;
 
 const Logo = styled.div`
   position: absolute;
-  left: 0px;
+  left: 1.7rem;
   bottom: 1.2rem;
-  margin-left: 1rem;
 `;
 
 const ThingsContainer = styled.div`
   font-size: 1rem;
   display: flex;
   flex-flow: column wrap;
-  max-height: 70%;
+  max-height: 80%;
   justify-content: space-between;
   margin-bottom: 1.25rem;
   margin-left: 1rem;
@@ -91,7 +89,7 @@ class Invitation extends React.Component {
               );
             })}
             <Logo>
-              <img src={bw ? logobw : logo} alt="skautske logo" />
+              <img style={{ width: '42px' }} src={bw ? logobw : logo} alt="skautske logo" />
             </Logo>
           </LeftStyled>
           <RightStyled bw={bw}>

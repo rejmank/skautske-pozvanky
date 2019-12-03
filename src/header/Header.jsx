@@ -20,7 +20,7 @@ const HeaderContainer = styled.div`
   display: flex;
   width: 90em;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: center;
   margin: auto;
 `;
 
@@ -35,10 +35,6 @@ const Header = () => {
     <HeaderStyled>
       <HeaderContainer>
         <BigText color="white">Generátor pozvánek</BigText>
-        <StandardText color="white">
-          <AStyled href="http://www.logo.skaut.cz/">logo.skaut.cz</AStyled>
-          <AStyled href="http://www.logo.skaut.cz/">Další grafické šablony a nástroje</AStyled>
-        </StandardText>
       </HeaderContainer>
     </HeaderStyled>
   );

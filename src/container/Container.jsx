@@ -33,7 +33,7 @@ const PrintOnly = styled.div`
 
 const ColoredBackground = styled.div`
   background-color: #f2f2f2;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const Buttons = styled.div`
@@ -51,6 +51,7 @@ const Button = styled.button`
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-family: themix;
   font-size: 1.2em;
   margin-top: 15px;
   margin-left: 15px;

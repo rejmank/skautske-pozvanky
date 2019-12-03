@@ -2,6 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { BigText } from '../../styled/Styled';
+import ReactTooltip from 'react-tooltip';
 
 const getHeight = type => {
   switch (type) {
@@ -26,7 +27,14 @@ const InputBox = ({ action, header, id, text, type }) => {
   return (
     <>
       <BigText>{header}</BigText>
+      <ReactTooltip html data-multiline />
       <TextArea
+        data-tip="<div>tady můžeš použít markdown.</div>
+        <div>Napiš ** pro to aby byl text tučný</div>
+        <div>Napiš * pro to aby byl text kurzivou</div>
+        <div>A můžeš dělat spoustu dalších věcí.</div>
+        <div>Pokud chceš víc informací podívej se na: www.jecas.cz/markdown</div>"
+        data-tip-disable={type !== 'normal'}
         type={type}
         onChange={e => {
           action({
