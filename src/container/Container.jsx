@@ -64,6 +64,15 @@ const Button = styled.button`
   }
 `;
 
+const Names = styled.div`
+  text-align: center;
+  font-size: 0.8em;
+  paddin-top: 100%;
+  @media print {
+    display: none;
+  }
+`;
+
 const Container = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const componentRef = useRef();
@@ -105,6 +114,10 @@ const Container = () => {
             </RightSideStyled>
           }
         />
+        <Names>
+          Vytvořil <a href="https://twitter.com/rejmank1">Koumal</a> s podporou ústředí Junáka -
+          českého skauta
+        </Names>
       </ContainerStyled>
     </ColoredBackground>
   );

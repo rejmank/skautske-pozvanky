@@ -52,7 +52,7 @@ const PackHeader = styled.h2`
 
 const Logo = styled.div`
   position: absolute;
-  left: 1.7rem;
+  left: 2rem;
   bottom: 1.2rem;
 `;
 
