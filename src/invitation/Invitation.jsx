@@ -11,7 +11,7 @@ import Text from './text/text';
 
 const CardStyled = styled.div`
   display: flex;
-  border: 2px solid #152469;
+  border: 2px solid ${props => (props.bw ? '#152469' : '#535355')};
   -webkit-print-color-adjust: exact;
   height: 480px;
   width: 640px;

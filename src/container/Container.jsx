@@ -104,7 +104,12 @@ const Container = () => {
                 </Button>
               </Buttons>
               <PrintOnly>
-                <Invitation things={state.things} texts={state.texts} ref={componentRef} />
+                <Invitation
+                  bw={state.bw}
+                  things={state.things}
+                  texts={state.texts}
+                  ref={componentRef}
+                />
               </PrintOnly>
             </div>
           }

@@ -10,12 +10,6 @@ Object {
   font-style: normal;
 }
 
-.c3 {
-  font-size: 0.8em;
-  color: white;
-  font-style: normal;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -43,18 +37,11 @@ Object {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: auto;
-}
-
-.c4 {
-  color: white;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-left: 1em;
 }
 
 @media print {
@@ -77,23 +64,6 @@ Object {
           >
             Generátor pozvánek
           </h3>
-          <div
-            class="c3"
-            color="white"
-          >
-            <a
-              class="c4"
-              href="http://www.logo.skaut.cz/"
-            >
-              logo.skaut.cz
-            </a>
-            <a
-              class="c4"
-              href="http://www.logo.skaut.cz/"
-            >
-              Další grafické šablony a nástroje
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -103,7 +73,7 @@ Object {
       class="sc-bxivhb ddEGGm"
     >
       <div
-        class="sc-ifAKCX cmnENJ"
+        class="sc-ifAKCX kwxkTu"
       >
         <h3
           class="sc-bwzfXH dEcpQI"
@@ -111,23 +81,6 @@ Object {
         >
           Generátor pozvánek
         </h3>
-        <div
-          class="sc-htpNat erRABY"
-          color="white"
-        >
-          <a
-            class="sc-EHOje kPXZwU"
-            href="http://www.logo.skaut.cz/"
-          >
-            logo.skaut.cz
-          </a>
-          <a
-            class="sc-EHOje kPXZwU"
-            href="http://www.logo.skaut.cz/"
-          >
-            Další grafické šablony a nástroje
-          </a>
-        </div>
       </div>
     </div>
   </div>,

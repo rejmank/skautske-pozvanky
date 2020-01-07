@@ -11,23 +11,15 @@ Object {
 
 .c0 {
   max-width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
   max-height: 80%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 <body>
@@ -40,24 +32,34 @@ Object {
           color="#9a158f"
           font-size="1rem"
         >
-          ☐ 
-          
+          ☐
         </div>
+        <div
+          class="c1"
+          color="#9a158f"
+          font-size="1rem"
+          style="padding-left: 5px;"
+        />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-bxivhb fZYRFr"
+      class="sc-bxivhb cqFfly"
     >
       <div
         class="sc-htpNat kqfmGm"
         color="#9a158f"
         font-size="1rem"
       >
-        ☐ 
-        
+        ☐
       </div>
+      <div
+        class="sc-htpNat kqfmGm"
+        color="#9a158f"
+        font-size="1rem"
+        style="padding-left: 5px;"
+      />
     </div>
   </div>,
   "debug": [Function],
@@ -126,23 +128,15 @@ Object {
 
 .c0 {
   max-width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
   max-height: 80%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 <div>
@@ -154,7 +148,14 @@ Object {
           color="#9a158f"
           font-size="1rem"
         >
-          ☐ 
+          ☐
+        </div>
+        <div
+          class="c1"
+          color="#9a158f"
+          font-size="1rem"
+          style="padding-left: 5px;"
+        >
           test
         </div>
       </div>
@@ -162,14 +163,21 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bxivhb fZYRFr"
+      class="sc-bxivhb cqFfly"
     >
       <div
         class="sc-htpNat kqfmGm"
         color="#9a158f"
         font-size="1rem"
       >
-        ☐ 
+        ☐
+      </div>
+      <div
+        class="sc-htpNat kqfmGm"
+        color="#9a158f"
+        font-size="1rem"
+        style="padding-left: 5px;"
+      >
         test
       </div>
     </div>
@@ -240,23 +248,15 @@ Object {
 
 .c0 {
   max-width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
+  -webkit-flex-flow: nowrap;
+  -ms-flex-flow: nowrap;
+  flex-flow: nowrap;
   max-height: 80%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 <div>
@@ -268,7 +268,14 @@ Object {
           color="#535355"
           font-size="1rem"
         >
-          ☐ 
+          ☐
+        </div>
+        <div
+          class="c1"
+          color="#535355"
+          font-size="1rem"
+          style="padding-left: 5px;"
+        >
           test
         </div>
       </div>
@@ -276,14 +283,21 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bxivhb fZYRFr"
+      class="sc-bxivhb cqFfly"
     >
       <div
         class="sc-htpNat dzJouz"
         color="#535355"
         font-size="1rem"
       >
-        ☐ 
+        ☐
+      </div>
+      <div
+        class="sc-htpNat dzJouz"
+        color="#535355"
+        font-size="1rem"
+        style="padding-left: 5px;"
+      >
         test
       </div>
     </div>
